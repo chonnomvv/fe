@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+</head>
+
+
+<body>
+<form action="#" method="post" id="join_form">
+<input type="text" name="address" placeholder="도로명 주소 입력" id="address">
+<button id="zipcode_search">우편번호 찾기</button>
+</form>
+<script>
+    $(function () {
+
+        $('#zipcode_search').click(function () {
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    console.log(data)
+                    $("#address").val(data.address);
+                }
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+
+            }).open();
+        });
+    })
+</script>
+</body>
+</html>
