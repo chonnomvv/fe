@@ -12,12 +12,26 @@
             width: 300px;
             height: 700px;
             background: burlywood;
-
+            margin: auto;
+            background: url("https://i.pinimg.com/originals/19/34/92/19349263d471763cf2719c106ed53fb9.jpg");
+            color: #9b9693;
+        }
+        form{
+            margin: 10px 10px 0 10px;
         }
 
         span {
             color: #de4952;
             margin-left: 10px;
+        }
+
+        .form-submit{
+            display: inline-block;
+            alignment: right;
+        }
+        a{
+            color: #9b9693;
+            border: 1px solid #9b9693;
         }
     </style>
 </head>
@@ -26,10 +40,13 @@
 <body>
 
 <div class="wrapper">
+    <div class="logo">
+        <a href="#"></a>
+    </div>
     <form method="post" action="#" id="sign_form" name="form">
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" name="email" id="email" onblur="email_check();"
+            <input type="text" class="form-control" name="email" id="email"
                    placeholder="이메일을 입력하세요.">
             <span id="email_check"></span>
         </div>
@@ -46,9 +63,10 @@
         <div class="form-group">
             <label for="zipcode">Adrress</label>
             <input type="text" class="form-control" id="zipcode" placeholder="우편번호" disabled="on">우편번호
-            <input type="text" class="form-control" id="address1" disabled="on" placeholder="">주소1
-            <input type="text" class="form-control" id="address2" placeholder="">주소2
-            <span id="address2_check">상세 주소 입력</span>
+            <input type="text" class="form-control" id="address1" disabled="on" placeholder="">
+            <p id="address2_check">상세 주소 입력</p>
+            <input type="text" class="form-control" id="address2" placeholder="">
+
             <!--<button id="zipcode_search">찾기</button>-->
             <a href="#" id="zipcode_search" type="">우편번호 찾기</a>
         </div>
@@ -98,8 +116,7 @@
         });
     });
 
-    function email_check() {
-
+    $("#email").on("blur", function () {
         var email = $("#email").val();
         var email_reg = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
         console.log(email);
@@ -107,12 +124,41 @@
         console.log(email.match(email_reg));
         if (email_reg.test(email) === true) {
             $("#email_check").text("ok");
-            check_email = 1;
+
+            if ($("#email").hasClass("is-invalid")) {
+                $("#email").removeClass("is-invalid");
+                $("#email").addClass("is-valid");
+
+            } else {
+                $("#email").addClass("is-valid");
+                check_email = 1;
+            }
 
         } else {
             $("#email_check").text("no");
+            $("#email").removeClass("is-valid");
+            $("#email").addClass("is-invalid");
+
         }
-    }
+
+    })
+    // function email_check() {
+    //
+    //     var email = $("#email").val();
+    //     var email_reg = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    //     console.log(email);
+    //     console.log("1= " + email_reg.test(email));
+    //     console.log(email.match(email_reg));
+    //     if (email_reg.test(email) === true) {
+    //         $("#email_check").text("ok");
+    //         $("#email").addClass("is-valid");
+    //         check_email = 1;
+    //
+    //     } else {
+    //         $("#email_check").text("no");
+    //         $("#email").addClass("is-invalid");
+    //     }
+    // }
 
     function name_check() {
 
@@ -147,7 +193,7 @@
     $(".form-submit").click(function () {
         if (check_pw == 1 && check_name == 1 && check_email == 1) {
             if ($("#address2").val().length < 1) {
-                console.log("address: "+ $("#address2").length);
+                console.log("address: " + $("#address2").length);
                 alert("상세 주소를 입력하세요");
                 return false;
             }
