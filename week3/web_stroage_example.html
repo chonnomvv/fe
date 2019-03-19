@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="content_form">
+    <input type="text" name="content1" id="content1">
+    <input type="text" name="content2" id="content2">
+    <input type="text" name="content3" id="content3">
+
+    <button id="btn_save">Save</button>
+    <button id="btn_load">Load</button>
+</form>
+
+<script type="text/javascript">
+
+    $(function () {
+        var storage_key = "content";
+        $(function () {
+            $("#btn_save").click(function (e) {
+                e.preventDefault();
+                console.log($("#content_form").serialize());
+
+
+                var content_serial = $("#content_form").serialize()
+
+                console.log(content_serial.split("&"));
+                    localStorage.setItem(storage_key,content_serial);
+
+                }
+            );
+
+            $("#btn_load").click(function (e) {
+                e.preventDefault();
+                var form_content = localStorage.getItem(storage_key);
+                var split_data = form_content.split("&");
+                for(var i=0 in split_data){
+                    var content_data=split_data[i].split("=");
+                    var key=content_data[0];
+                    var data=content_data[1];
+
+                    console.log(content_data);
+
+
+
+                    // $("#content").val(content_data);
+                    $("#"+key).val(data);
+                }
+            });
+        })
+    });
+</script>
+</body>
+</html>

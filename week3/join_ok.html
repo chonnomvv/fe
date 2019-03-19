@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button class="load" onclick="return load_listing()">load</button>
+<p></p>
+
+<script>
+    var url = window.location.href
+
+    var array= new Array();
+
+    $(".load").ready(function () {
+        var array_king = new Array();
+
+        array_king.push(localStorage.getItem("member"));
+        var url_split = url.split("?");
+        var url_split_split = url_split[1].split("&");
+        var long_story = {};
+
+        var member_story = {};
+        for (var i in url_split_split) {
+            var content = url_split_split[i].split("=");
+            var key = decodeURIComponent(content[0]);
+            var value = decodeURIComponent(content[1]);
+            //json Key 값 동적으로 입력하
+            long_story[key] = value;
+        }
+
+        console.log(long_story)
+
+        var member_name = long_story.name;
+
+
+
+        long_story = JSON.stringify(long_story);
+
+        // member_story[member_name] = long_story;
+
+        // console.log(long_story.toString() + "tostring");
+
+
+        // if (localStorage.getItem('order') == null|| localStorage.getItem('order')==0) {
+        //     order = 1;
+        // } else {
+        //     order = localStorage.getItem('order') - 1;
+        // }
+        // localStorage.setItem('order', order);
+        console.log(long_story+"longstory");
+        console.log(array_king.member+"array");
+        array_king.push(long_story);
+        localStorage.setItem('member', array_king.toString());
+        // console.log(order + "order");
+        var check_local = localStorage.getItem(member_name);
+
+        load_listing();
+
+    })
+
+
+    function load_listing() {
+        var url_split = url.split("?");
+        var url_split_split = url_split[1].split("&");
+        var content = url_split_split[1].split("=");
+        content = decodeURIComponent(content);
+        var real_name = content.split(",")[1];
+        console.log(real_name);
+        // $("p").text(localStorage.getItem())
+        // for(localStorage.)
+        $("p").text(real_name + " : " + localStorage.getItem('member'));
+    }
+</script>
+
+</body>
+</html>

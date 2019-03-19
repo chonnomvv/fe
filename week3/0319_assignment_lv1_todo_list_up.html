@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./todo_list_up.css" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+<!-- Uses a transparent header that draws on top of the layout's background -->
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="add-btn-area mdl-layout__header-row">
+            <!-- Title -->
+            <span class="add-btn-area mdl-layout-title">Todo List</span>
+            <!-- Colored mini FAB button -->
+            <button class="add-btn-area add-btn mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored">
+                <i class="add-btn-area material-icons">add</i>
+            </button>
+
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">모든항목</a>
+                <a class="mdl-navigation__link" href="">진행중</a>
+                <a class="mdl-navigation__link" href="">완료</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="add-btn-area mdl-layout-title">Title</span>
+        <nav class="add-btn-area mdl-navigation">
+            <a class="mdl-navigation__link" href="">모든항목</a>
+            <a class="mdl-navigation__link" href="">진행중</a>
+            <a class="mdl-navigation__link" href="">완료</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="add_todo text-area">
+            <form action="#">
+                <div class="text-area mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input id="todo-content" class="text-area mdl-textfield__input" type="text" id="sample3">
+                    <label class="text-area mdl-textfield__label" for="sample3">What to do...</label>
+                    <!-- Colored mini FAB button -->
+                    <button class="text-area add_submit mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                        <i class="todo-add-btn text-area material-icons">add</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="todo-left demo-list-action mdl-list">
+            <ul class="todolist-prepend-left forking">
+            </ul>
+        </div>
+
+        <div class="todo-centers demo-list-action mdl-list">
+            <ul class="todolist-prepend-centers forking">
+            </ul>
+        </div>
+        <div class="todo-right demo-list-action mdl-list">
+            <ul class="todolist-prepend-right forking">
+            </ul>
+        </div>
+
+    </main>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            load();
+        })
+
+        $(".add-btn").click(function () {
+
+            console.log("add click")
+            $(".add_todo").css('opacity', '0');
+        })
+        $('body').click(function (e) {
+            if (!$(e.target).hasClass("text-area") && !$(e.target).hasClass("add-btn-area")) {
+
+                console.log('영역 밖입니다.');
+
+                $(".add_todo").css('opacity', '1');
+
+            }
+        });
+
+        var add_count = 0;
+
+        $(document).on("click", ".add_submit", function () {
+            if ($("#todo-content").val() == '') {
+                console.log('text-area is empty')
+                return false;
+            } else {
+                console.log("filled");
+                if (add_count < 5) {
+                    add_count++;
+                    var content = $('#todo-content').text();
+                    $(".todolist-prepend-left").prepend(" <li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
+                        "                    <div class=\"todo-over mdl-list__item\">\n" +
+                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                        "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
+                        "                 </span>\n" +
+                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                        "                    </div>\n" +
+                        "                </li>");
+
+                    // $(this).text(content);
+
+                    saveTodo();
+                } else if (add_count < 10 && add_count > 4) {
+                    add_count++;
+                    var content = $('#todo-content').text();
+                    $(".todolist-prepend-centers").prepend("<li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
+                        "                    <div class=\"todo-over mdl-list__item\">\n" +
+                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                        "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
+                        "                 </span>\n" +
+                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                        "                    </div>\n" +
+                        "                </li>");
+                } else if (add_count < 15) {
+                    add_count++;
+                    $(".todolist-prepend-right").prepend("<li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
+                        "                    <div class=\"todo-over mdl-list__item\">\n" +
+                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                        "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
+                        "                 </span>\n" +
+                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                        "                    </div>\n" +
+                        "                </li>");
+                }
+                $("#todo-content").val('');
+            }
+        })
+
+
+        $(document).on("click", "#delete-list", function () {
+            $(this).parent().remove();
+        })
+
+        $(document).on("click", ".todo-done", function () {
+            if (!$(this).hasClass("strong")) {
+                $(this).addClass("strong");
+                $(this).parent().addClass("strong");
+            } else {
+                $(this).removeClass("strong");
+                $(this).parent().removeClass("strong");
+            }
+
+        })
+        var todo_list_json = [];
+        var storage_key = "todos";
+
+        function saveTodo() {
+
+            var data = [];
+            var todos = $(".demo-list-action ul li .todo-over .todolist-content");
+
+            todos.each(function (index) {
+                data[index] = [$(this).text(), $(this).hasClass("strong")];
+            });
+
+            localStorage.setItem(storage_key,JSON.stringify(data));
+        }
+
+        function load(){
+            var todos= localStorage.getItem(storage_key);
+            todos=JSON.parse(todos);
+
+            for(var key in todos){
+                var value = todos[key][0];
+                var hasClass= todos[key][1];
+
+                 $(".todolist-prepend-left").append(" <li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
+                        "                    <div class=\"todo-over mdl-list__item\">\n" +
+                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                        "                 <span class=\"todolist-content\">" + value + "</span>\n" +
+                        "                 </span>\n" +
+                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                        "                    </div>\n" +
+                        "                </li>");
+
+            }
+        }
+
+
+    </script>
+</div>
+</body>
+</html>

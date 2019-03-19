@@ -1,0 +1,100 @@
+@charset "utf-8";
+.demo-layout-transparent {
+    background: url('https://i.imgur.com/cSGJJw5.jpg') center / cover;
+}
+
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+}
+
+.add-btn {
+    margin-left: 0.5em;
+
+}
+
+.add_todo {
+    margin-left: 8em;
+    color: #d5d5d5;
+    opacity: 0;
+}
+
+.add_submit {
+    margin-left: 12em;
+    height: 22px !important;
+    min-width: 22px !important;
+    width: 22px !important;
+    background: darkred !important;
+}
+
+.demo-list-action {
+    width: 300px;
+}
+
+.parent-todolist {
+    display: none;
+}
+
+.todolist-content {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.todolist-prepend-left {
+    list-style: none;
+}
+
+.todolist-prepend-centers {
+    list-style: none;
+    margin-left: 125px;
+}
+
+.todolist-prepend-right {
+    list-style: none;
+}
+
+.todo-over {
+    overflow: hidden;
+    width: 300px;
+}
+
+.demo-list-action {
+}
+
+.inner-span {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#delete-list {
+
+}
+
+.todo-left {
+    float: left;
+    margin: auto;
+}
+
+.todo-right {
+    float: right;
+    margin-right: 85px;
+    margin-top: -407px;
+}
+
+.todo-centers {
+    margin-left: 388px;
+
+}
+
+.strong {
+    border: 2px solid darkorange;
+    border-radius: 50%;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+}
+
