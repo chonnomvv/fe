@@ -72,7 +72,7 @@
     </main>
     <script type="text/javascript">
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             load();
         })
 
@@ -91,65 +91,109 @@
             }
         });
 
-        var add_count = 0;
+        // var add_count = 0;
 
+        var content_key = $("#todo-content").val();
         $(document).on("click", ".add_submit", function () {
             if ($("#todo-content").val() == '') {
                 console.log('text-area is empty')
                 return false;
             } else {
                 console.log("filled");
-                if (add_count < 5) {
-                    add_count++;
-                    var content = $('#todo-content').text();
-                    $(".todolist-prepend-left").prepend(" <li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
-                        "                    <div class=\"todo-over mdl-list__item\">\n" +
-                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
-                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
-                        "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
-                        "                 </span>\n" +
-                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
-                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
-                        "                    </div>\n" +
-                        "                </li>");
+                // if (add_count < 5) {
+                //     add_count++;
+                var content = $('#todo-content').text();
+                $(".todolist-prepend-left").prepend(" <li id=\"" + content_key + "\" name=\"" + content_key + "\" class=\"todolist_add_div\">\n" +
+                    "                    <div class=\"todo-over mdl-list__item\">\n" +
+                    "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                    "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                    "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
+                    "                 </span>\n" +
+                    "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                    "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                    "                    </div>\n" +
+                    "                </li>");
 
-                    // $(this).text(content);
+                // $(this).text(content);
 
-                    saveTodo();
-                } else if (add_count < 10 && add_count > 4) {
-                    add_count++;
-                    var content = $('#todo-content').text();
-                    $(".todolist-prepend-centers").prepend("<li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
-                        "                    <div class=\"todo-over mdl-list__item\">\n" +
-                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
-                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
-                        "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
-                        "                 </span>\n" +
-                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
-                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
-                        "                    </div>\n" +
-                        "                </li>");
-                } else if (add_count < 15) {
-                    add_count++;
-                    $(".todolist-prepend-right").prepend("<li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
-                        "                    <div class=\"todo-over mdl-list__item\">\n" +
-                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
-                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
-                        "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
-                        "                 </span>\n" +
-                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
-                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
-                        "                    </div>\n" +
-                        "                </li>");
-                }
-                $("#todo-content").val('');
+                saveTodo();
+                //     } else if (add_count < 10 && add_count > 4) {
+                //         add_count++;
+                //         var content = $('#todo-content').text();
+                //         $(".todolist-prepend-centers").prepend("<li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
+                //             "                    <div class=\"todo-over mdl-list__item\">\n" +
+                //             "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                //             "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                //             "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
+                //             "                 </span>\n" +
+                //             "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                //             "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                //             "                    </div>\n" +
+                //             "                </li>");
+                //     } else if (add_count < 15) {
+                //         add_count++;
+                //         $(".todolist-prepend-right").prepend("<li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
+                //             "                    <div class=\"todo-over mdl-list__item\">\n" +
+                //             "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                //             "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                //             "                 <span class=\"todolist-content\">" + $("#todo-content").val() + "</span>\n" +
+                //             "                 </span>\n" +
+                //             "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                //             "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                //             "                    </div>\n" +
+                //             "                </li>");
+                //     }
+                //     $("#todo-content").val('');
+                // }
             }
         })
 
 
         $(document).on("click", "#delete-list", function () {
+
+            var removeItem = $(this).parent().parent().attr('name');
+            // console.log(typeof removeItem+": typeOf");
+
+            var step1 = localStorage.getItem(storage_key);
+            console.log(step1);
+            var step2 = JSON.parse(step1);
+
+
+            for (var i = 0; i < step2.length; i++) {
+                console.log(step2[i], "//");
+            }
+
+            // console.log(step2);
+
+            for (var i = 0; i < step2.length; i++) {
+                console.log(i + "번째");
+                console.log(step2[i]);
+                console.log(step2[i].includes(removeItem));
+                if (step2[i].includes(removeItem)) {
+
+                    index_th = i;
+                    step2.splice(index_th, 1);
+                    var step3 = JSON.stringify(step2);
+                    localStorage.setItem(storage_key, step3);
+                    console.log(index_th + "찾았당");
+                    break;
+                }
+
+            }
+            // var index_th = step1.hasOwnProperty(removeItem);
+            //
+            // console.log(step3);
+            // var step4 = JSON.stringify(step3);
+            //
+            //
+            // console.log(step4);
+
+            //
+
+            // localStorage.removeItem(removeItem);
             $(this).parent().remove();
-        })
+
+        });
 
         $(document).on("click", ".todo-done", function () {
             if (!$(this).hasClass("strong")) {
@@ -159,8 +203,14 @@
                 $(this).removeClass("strong");
                 $(this).parent().removeClass("strong");
             }
+        });
 
-        })
+        function storage_delete() {
+            console.log("delete : " + $(this).attr('name'));
+            localStorage.removeItem($(this).attr('name'));
+
+        }
+
         var todo_list_json = [];
         var storage_key = "todos";
 
@@ -173,27 +223,27 @@
                 data[index] = [$(this).text(), $(this).hasClass("strong")];
             });
 
-            localStorage.setItem(storage_key,JSON.stringify(data));
+            localStorage.setItem(storage_key, JSON.stringify(data));
         }
 
-        function load(){
-            var todos= localStorage.getItem(storage_key);
-            todos=JSON.parse(todos);
+        function load() {
+            var todos = localStorage.getItem(storage_key);
+            todos = JSON.parse(todos);
 
-            for(var key in todos){
+            for (var key in todos) {
                 var value = todos[key][0];
-                var hasClass= todos[key][1];
+                var hasClass = todos[key][1];
 
-                 $(".todolist-prepend-left").append(" <li id=\"" + add_count + "\" name=\"" + add_count + "\" class=\"todolist_add_div\">\n" +
-                        "                    <div class=\"todo-over mdl-list__item\">\n" +
-                        "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
-                        "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
-                        "                 <span class=\"todolist-content\">" + value + "</span>\n" +
-                        "                 </span>\n" +
-                        "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
-                        "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
-                        "                    </div>\n" +
-                        "                </li>");
+                $(".todolist-prepend-left").append(" <li id=\"" + value + "\" name=\"" + value + "\" class=\"todolist_add_div\">\n" +
+                    "                    <div class=\"todo-over mdl-list__item\">\n" +
+                    "                 <span class=\"mdl-list__item-primary-content\ inner-span\">\n" +
+                    "                     <i class=\"material-icons mdl-list__item-avatar\">person</i>\n" +
+                    "                 <span class=\"todolist-content\">" + value + "</span>\n" +
+                    "                 </span>\n" +
+                    "                        <a class=\"todo-done mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>\n" +
+                    "                        <a id=\"delete-list\" class=\"mdl-list__item-secondary-action\" href=\"#\"><i class=\"material-icons\">star</i></a>" +
+                    "                    </div>\n" +
+                    "                </li>");
 
             }
         }
