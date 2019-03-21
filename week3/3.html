@@ -1,107 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Day7_todo</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript">
-
-
-        //투두리스트
-        var list_item = document.getElementById("todolist");
-        //('todolist');
-        storage_key = "todos";
-
-
-        //세이브 투두
-        function saveTodo() {
-            console.log("saveTodo");
-            var data = {};
-            var todos = $('#todolist');
-            todos.children().each(function (index) {
-                data[index] = [$(this).attr('data-value'), $(this).hasClass("complete")];
-            });
-            localStorage.setItem(storage_key, JSON.stringify(data));
-            console.log(storage_key + "stkey");
-            console.log(JSON.stringify(data) + "data");
-            console.log("the end");
-        }
-
-
-        //로드 투두
-        function loadTodo() {
-            var todos = localStorage.getItem(storage_key);
-            todos = JSON.parse(todos);
-            for (var key in todos) {
-                var value = todos[key][0];
-                var complete = todos[key][1];
-                sample_item = $(list_item).clone();
-                // sample_item.find('#complete').html(value);
-
-               $('#todolist').append("<li class='complete' data-value='" + value+ "'>" + value + "<button type=button class=btn btn-primary>Delete</button></li>");
-                // sample_item.find('#todolist').attr("data-value", value);
-
-                if (complete) {
-                    sample_item.find('#todolist').addClass('complete')
-                }
-                $('#todolist').append(sample_item);
-            }
-            //componentHandler.upgradeDom();
-        };
-        //이벤트 시작
-        // loadTodo();
-        $(document).ready(function () {
-            loadTodo();
-            $('form').submit(function (e) {
-                e.preventDefault();
-                $('#todolist').append("<li class='complete' data-value='" + $('input[name="name"]').val() + "'>" + $('input[name="name"]').val() + "<button type=button class=btn btn-primary>Delete</button></li>");
-                saveTodo();
-            });
-            //버튼을 클릭했을 때 삭제하려면 submit이 아니라 submit 밖에 (부모위치) 삭제 명령을 위치시켜야 한다
-            $("#todolist").on("click", "li button", function () {
-                $(this).parent().remove();
-                saveTodo();
-            })
-        });
-    </script>
-    <style>
-        li {
-            list-style-type: none;
-        }
-
-        .mainscr {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
-
 <body>
-<div class="mainscr">
-    <h1>To do list</h1>
-    <br><br>
-    <form action="#" method="post">
-        <input type="text" name="name">
-        <input id="btn_save" class="btn btn-primary" type="submit">
-    </form>
-    <div>
-        <!--데이터 출력 부분-->
-        <ul class="todo" id="todolist">
-        </ul>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-</body>
 
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Welcome</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Mauris sagittis pellentesque lacus eleifend lacinia...
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+
+    </div>
+    <div class="mdl-card__menu">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+            <i class="material-icons">share</i>
+        </button>
+
+    </div>
+    <div>
+        <button>입력하기</button>
+        <form action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Text...</label>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
 </html>

@@ -16,9 +16,11 @@
 <script>
     $(function () {
 
-        $('#zipcode_search').click(function () {
+        $('#zipcode_search').click(function (e) {
+            e.preventDefault();
             new daum.Postcode({
                 oncomplete: function (data) {
+                    console.log("hi");
                     console.log(data)
                     $("#address").val(data.address);
                 }
@@ -31,3 +33,4 @@
 </script>
 </body>
 </html>
+

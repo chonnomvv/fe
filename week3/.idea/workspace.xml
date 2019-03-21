@@ -14,68 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="daum_api_basic.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daum_api_basic.html">
+      <file leaf-file-name="hotPlace_v1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hotPlace_v1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="0319_assignment_lv2_addressApi.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/0319_assignment_lv2_addressApi.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="227" column="34" selection-start-line="227" selection-start-column="34" selection-end-line="227" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="join_ok.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/join_ok.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="32.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/32.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="0319_assignment_lv1_todo_list_up.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/0319_assignment_lv1_todo_list_up.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
-              <folding>
-                <element signature="e#5317#5369#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="maps_tuto.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/maps_tuto.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="261">
+              <caret line="96" column="55" lean-forward="true" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -83,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo_list_up.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/todo_list_up.css">
+      <file leaf-file-name="0321.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/0321.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+            <state relative-caret-position="500">
+              <caret line="72" column="44" lean-forward="true" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -107,6 +50,9 @@
       <find>split</find>
       <find>attr</find>
       <find>load</find>
+      <find>latlng</find>
+      <find>json</find>
+      <find>setItem</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -117,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/daum_api_basic.html" />
         <option value="$PROJECT_DIR$/api_practive.html" />
         <option value="$PROJECT_DIR$/api_practice.html" />
         <option value="$PROJECT_DIR$/web_stroage_example.html" />
@@ -126,10 +71,13 @@
         <option value="$PROJECT_DIR$/0318_assignment_addressApi.html" />
         <option value="$PROJECT_DIR$/0319_assignment_lv2_addressApi.html" />
         <option value="$PROJECT_DIR$/join_ok.html" />
-        <option value="$PROJECT_DIR$/3.html" />
         <option value="$PROJECT_DIR$/32.html" />
         <option value="$PROJECT_DIR$/0319_assignment_lv1_todo_list_up.html" />
+        <option value="$PROJECT_DIR$/3.html" />
+        <option value="$PROJECT_DIR$/daum_api_basic.html" />
         <option value="$PROJECT_DIR$/maps_tuto.html" />
+        <option value="$PROJECT_DIR$/hotPlace_v1.html" />
+        <option value="$PROJECT_DIR$/0321.html" />
       </list>
     </option>
   </component>
@@ -243,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +203,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -283,12 +231,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.maps_tuto.html">
-    <configuration name="0319_assignment_lv1_todo_list_up.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/0319_assignment_lv1_todo_list_up.html" />
-    <configuration name="32.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/32.html" />
+  <component name="RunManager" selected="JavaScript Debug.0321_assignment.html">
+    <configuration name="0319_assignment_lv2_addressApi.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/0319_assignment_lv2_addressApi.html" />
+    <configuration name="0321_assignment.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/0321_assignment.html" />
     <configuration name="3.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/3.html" />
-    <configuration name="join_ok.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/join_ok.html" />
-    <configuration name="maps_tuto.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/maps_tuto.html" />
+    <configuration name="daum_api_basic.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/daum_api_basic.html" />
+    <configuration name="hotPlace_v1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/week3/hotPlace_v1.html" />
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -371,19 +319,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.0319_assignment_lv1_todo_list_up.html" />
-      <item itemvalue="JavaScript Debug.join_ok.html" />
       <item itemvalue="JavaScript Debug.3.html" />
-      <item itemvalue="JavaScript Debug.32.html" />
-      <item itemvalue="JavaScript Debug.maps_tuto.html" />
+      <item itemvalue="JavaScript Debug.hotPlace_v1.html" />
+      <item itemvalue="JavaScript Debug.daum_api_basic.html" />
+      <item itemvalue="JavaScript Debug.0319_assignment_lv2_addressApi.html" />
+      <item itemvalue="JavaScript Debug.0321_assignment.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.maps_tuto.html" />
-        <item itemvalue="JavaScript Debug.0319_assignment_lv1_todo_list_up.html" />
-        <item itemvalue="JavaScript Debug.32.html" />
+        <item itemvalue="JavaScript Debug.0321_assignment.html" />
+        <item itemvalue="JavaScript Debug.hotPlace_v1.html" />
+        <item itemvalue="JavaScript Debug.daum_api_basic.html" />
+        <item itemvalue="JavaScript Debug.0319_assignment_lv2_addressApi.html" />
         <item itemvalue="JavaScript Debug.3.html" />
-        <item itemvalue="JavaScript Debug.join_ok.html" />
       </list>
     </recent_temporary>
   </component>
@@ -410,13 +358,13 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.13325031" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.13325031" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49937734" visible="true" weight="0.12986112" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49937734" weight="0.20972222" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -440,6 +388,38 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5006227" side_tool="true" weight="0.20694445" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" visible="true" weight="0.13325031" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49937734" visible="true" weight="0.20972222" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -448,6 +428,47 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/daum_api_basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hotPlace_v1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1744">
+          <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo_list_up.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0319_assignment_lv1_todo_list_up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="197" column="45" selection-start-line="197" selection-start-column="45" selection-end-line="197" selection-end-column="45" />
+          <folding>
+            <element signature="e#5317#5369#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/daum_api_basic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -619,27 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web_stroage_example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo_list_up.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daum_api_basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/join_ok.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="944">
@@ -647,10 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3.html">
+    <entry file="file://$PROJECT_DIR$/web_stroage_example.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="92" />
+        <state relative-caret-position="227">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -663,28 +663,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/0319_assignment_lv2_addressApi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="227" column="34" selection-start-line="227" selection-start-column="34" selection-end-line="227" selection-end-column="34" />
+        <state relative-caret-position="-1258">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/0319_assignment_lv1_todo_list_up.html">
+    <entry file="file://$PROJECT_DIR$/3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
+        <state relative-caret-position="528">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo_list_up.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daum_api_basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hotPlace_v1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="96" column="55" lean-forward="true" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="55" />
           <folding>
-            <element signature="e#5317#5369#0" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/maps_tuto.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="563">
+          <caret line="52" column="70" lean-forward="true" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="15936" column="43" lean-forward="true" selection-start-line="15936" selection-start-column="43" selection-end-line="15936" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0319_assignment_lv1_todo_list_up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="225" column="50" selection-start-line="225" selection-start-column="46" selection-end-line="225" selection-end-column="50" />
+          <folding>
+            <element signature="e#5317#5369#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0321_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0321.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="72" column="44" lean-forward="true" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
         </state>
       </provider>
     </entry>
