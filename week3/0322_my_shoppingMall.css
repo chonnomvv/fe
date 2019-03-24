@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/*.img-big{*/
+/*ba*/
+/*}*/
+
+.img-small {
+    margin: auto;
+    width: 420px;
+}
+
+h5 {
+    font-size: 15px;
+    letter-spacing: -2px;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    /*color: blue;*/
+    text-decoration: underline;
+}
+
+.container {
+    min-width: 1280px;
+}
+
+.img-sm {
+    margin: 0 7px;
+}
+
+.img-big {
+    /*object-position: ;*/
+    margin-left: 50px;
+}
+
+.img-detail {
+    width: 560px
+
+}
+
+.price-content-detail {
+    display: inline-block;
+    width: 300px;
+}
+
+.price-content {
+    padding-top: 25px;
+}
+
+.detail-tab {
+
+    height: 50px;
+    border: solid 1px #d1d1d1;
+    text-align: center;
+    line-height: 50px;
+
+
+}
+
+.mdl-cell {
+    margin: 0;
+}
+
+.img-title-options-detail {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d1d1;
+    height: 55px;
+}
+
+.img-title-options-detail-1 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d1d1d1;
+    height: 110px;
+}
+
+
+.price-check {
+    width: 22%;
+    display: inline-block;
+}
+
+.price-check-long {
+    text-align: left;
+    display: inline-block;
+    width: 32%;
+}
+
+li {
+    list-style-type: none;
+}
+.rft-tab-wrapper{
+    padding-top: 8px;
+    position: sticky;
+    top: 0;
+}
+
+.rft-tab-1st-opt{
+    border: solid 1px #9b9693;
+    height: 50px;
+}
+
+.detail-tab-2nd{
+
+    padding-top: 8px;
+    height: 225px;
+    border: 1px solid #9b9693;
+    margin-top:20px;
+}
+.detail-tab-2nd-bottom{
+    /*margin-top: px;*/
+    border: none;
+    height: 45px;
+    text-align: right;
+}
+.pocket {
+    background: #222222;
+    color: #d5d5d5;
+    height: 60px;
+     line-height: 60px;
+}
+.pocket a{
+    color: #d5d5d5;
+
+}
+.div-sticky{
+    height: 100%;
+    position: sticky;
+    top:0;
+}
+
+.rft_buy_click{
+    height: 70px;
+    line-height: 70px;
+    background: #856f5f;
+}
+
+.rft_buy_click a{
+    color: #d5d5d5;
+}
+
+.rft_gift{
+
+}
+
+.detail-margin{
+    margin-top: 10px;
+}

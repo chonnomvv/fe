@@ -41,18 +41,12 @@
 </div>
 
 <script>
-
     $(function () {
-
-
         var mapOptions = {
             center: new naver.maps.LatLng(37, 127),
             zoom: 12
         };
-
-
         var map = new naver.maps.Map('map', mapOptions);
-
         // var flag = true;
         // console.log(localStorage.key(0));
         // var i = 0;
@@ -69,12 +63,10 @@
         //         flag = false;
         //     }
         // }
-
         var marker = new naver.maps.Marker({
             position: new naver.maps.LatLng(37.3595704, 127.105399),
             map: map
         });
-
         var contentString = [
             '<div class="demo-card-wide mdl-card mdl-shadow--2dp">',
             '<div class="mdl-card__title">',
@@ -92,7 +84,7 @@
             '</div>',
             '<div class="mdl-card__menu">',
             '<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">',
-            '<i class="material-icons">share</i>',
+            '<i class="material-icons" id="btn_close" >close</i>',
             '</button>',
             '</div>',
             '<div>',
@@ -105,10 +97,8 @@
         function load() {
             var load_html = '';
             var review = JSON.parse(localStorage.getItem("reviews"));
-
             for (var i in review) {
                 var review22 = review[i];
-
                 load_html += "<li>" + review22 + "</li>";
             }
             $("#review_save").append(load_html);
@@ -118,40 +108,28 @@
             content: contentString
         });
         $('#zipcode_search').click(function (e) {
-
             e.preventDefault();
             new daum.Postcode({
                 oncomplete: function (data) {
-
                     var road_address = '';
-
                     road_address = data.roadAddress;
-
                     naver.maps.Service.geocode({
                         address: road_address
                     }, function (status, response) {
                         if (status !== naver.maps.Service.Status.OK) {
                             return alert('Something wrong!');
                         }
-
                         var result = response.result, // 검색 결과의 컨테이너
                             items = result.items; // 검색 결과의 배열
-
                         var point_x_y = items[0].point;
                         var x = point_x_y['x'];
                         var y = point_x_y['y'];
-
                         var point = new naver.maps.Point(x, y),
                             marker = new naver.maps.Marker({position: point, map: map});
-
                         map.setCenter(point);
-
                         var id_name = x + "," + y
                         var review_item = localStorage.getItem(id_name) ? JSON.parse(localStorage.getItem(id_name)) : []
-
                         naver.maps.Event.addListener(marker, 'click', function (e) {
-
-
                             if (infowindow.getMap()) {
                                 $("#review_save").children().remove();
                                 review_content = '';
@@ -159,9 +137,7 @@
                             } else {
                                 infowindow.open(map, marker);
                             }
-
                             for (var i in JSON.parse(localStorage.getItem(id_name))) {
-
                                 console.log(i + " : " + JSON.parse(localStorage.getItem(id_name)));
                                 var review_content = JSON.parse(localStorage.getItem(id_name))[i];
                                 $("#review_save").append("<li>" + review_content + "</li>");
@@ -170,33 +146,28 @@
                             //
                             // var id = x;
                             //
-
                             $('#btn_submit').on("click", function () {
-
                                     var review_content = $("#sample3").val();
-
                                     if (localStorage.getItem(id_name) != null) {
-
                                         review_item.push(review_content);
                                         localStorage.setItem(id_name, JSON.stringify(review_item));
-
                                     } else {
                                         review_item.push(review_content);
                                         localStorage.setItem(id_name, JSON.stringify(review_item));
-
                                     }
                                     $("#review_save").append("<li>" + review_content + "</li>");
                                 }
                             );
+
+                            $("#btn_close").on("click", function () {
+                                infowindow.close();
+                            })
                         });
                     });
                 }
-
             }).open();
         });
-
     })
-
     // naver.maps.Event.addListener(naver_map, 'click', function (e) {
     //     var marker = new naver.maps.Marker({
     //         position: e.latlng,
@@ -206,8 +177,6 @@
     //
     //     naver.maps.Event.addListener(marker, 'click', test);
     // });
-
-
 </script>
 </body>
 </html>
